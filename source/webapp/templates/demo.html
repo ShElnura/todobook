@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="ru"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="ru"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ru"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модальные всплывающие окна с помощью CSS3 без Javascript</title>
+    <meta name="author" content="Dobrovoimaster" />
+    <meta name="keywords" content="CSS, CSS3, модальное окно, всплывающие окна" />
+    <meta name="description" content="Как с помощью CSS3, без использования javascript и изображений, создать всплывающие модальные окна" />
+    <meta name="robots" content="all" />
+    <meta name="copyright" content="Dobrovoimaster" />
+    <!-- стили  страницы -->
+	<link rel="stylesheet" href="css/demo-page.css" rel="stylesheet">
+	<!-- стили модального окна -->
+	<link rel="stylesheet" href="css/style-modal.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <div style="text-align: center;">
+		    <a href="#win1" class="button button-green">Открыть окно 1</a>
+		</div>
+        <a href="#x" class="overlay" id="win1"></a>
+        <div class="popup">
+            <h2>Запись добавлена!</h2>
+			<a class="close" title="Закрыть" href="#close"></a>
+        </div>
+    </div>
+</body>
+</html>

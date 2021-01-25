@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for book in books %}
+<div class="card">
+  <div class="card-header">Заголовок: {{book.title}}</div>
+  <div class="card-body">
+    <h5 class="card-title">Под заголовок: {{book.subtitle}}</h5>
+    <p class="card-text">Описание: {{book.description}}</p>
+  </div>
+  <a href="{% url 'webapp:view' book.pk %}">Детальный просмотр</a>
+  <li><a href="{% url 'webapp:delete'  book.pk %}">Удалить</a></li>
+
+  <button type="button" class="add" id="{{ obj.id }}" data-id="{{ obj.id }}">Добавить в избранный </button></div>
+{% endfor %}
+ {% endblock %}
+
+
+{% block js %}
+    <script>
+
+            $('.remove').click(function () {
+                let id = $(this).data("id");
+                let btn = $(`#${id}`);
+                $.ajax({
+                    url: `http://127.0.0.1:8000/book/remove/${id}/`,
+                    success: function (data) {
+                        btn.text("Добавить в избранных");
+                        btn.attr('class', 'add');
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock js %}

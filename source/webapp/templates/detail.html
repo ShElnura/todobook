@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Детальный просмотр{% endblock %}
+{% block content %}
+<div class="card">
+  <div class="card-header">Заголовок: {{book.title}}</div>
+  <div class="card-body">
+    <h5 class="card-title">Под заголовок: {{book.subtitle}}</h5>
+    <p class="card-text">Описание: {{book.description}}</p>
+  </div>
+    <li><a href="{% url 'webapp:delete'  book.pk %}">Delete</a></li>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Create Task{% endblock %}
+{% block content %}
+   <h1>Создать книгу</h1>
+   <form action="{% url 'webapp:create' %}" method="POST" enctype="multipart/form-data">
+        {% include 'partial/form.html' %}
+        <input type="submit" value="Создать" class="btn btn-primary">
+   </form>
+{% endblock %}
